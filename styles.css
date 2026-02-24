@@ -66,8 +66,7 @@ body {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
   align-items: center;
 }
 
@@ -115,33 +114,25 @@ body {
   text-decoration: underline;
 }
 
-/* ---------- Logo Panel ---------- */
+/* ---------- Brand Strip (Logo on White) ---------- */
 
-.hero-logo-wrap {
+.brand-strip {
+  background: #ffffff;
+  padding: 42px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.brand-strip-inner {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo-panel {
-  background: linear-gradient(180deg, #ffffff, #f4f7ff);
-  border-radius: 20px;
-  width: 480px;
-  max-width: 100%;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 28px 60px rgba(0,0,0,0.35);
-}
-
-.hero-logo {
-  width: 360px;
-  max-width: 100%;
+.brand-strip-logo {
+  width: 520px;
+  max-width: 92%;
   height: auto;
   object-fit: contain;
-  filter: contrast(1.15) saturate(1.10);
-  transform: translateY(-4px);
 }
 
 /* ---------- Sections ---------- */
@@ -242,104 +233,9 @@ footer {
   opacity: 0.9;
 }
 
-/* ---------- Responsive (Improved Mobile Layout) ---------- */
-
-/* ---------- Responsive (Refined Mobile Hero) ---------- */
+/* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
-
-  .hero { outline: 6px solid hotpink; }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .hero-copy {
-    order: 1;
-  }
-
-  .hero-logo-wrap {
-    order: 2;
-    margin-top: 6px;
-  }
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .subtitle {
-    font-size: 1.02rem;
-  }
-
-  .hero-actions {
-    flex-wrap: wrap;
-  }
-
-  /* Slimmer logo card */
-  .logo-panel {
-    width: 100%;
-    height: 140px;              /* reduced */
-    border-radius: 16px;        /* slightly tighter */
-    box-shadow: 0 12px 28px rgba(0,0,0,0.20);  /* softer */
-  }
-
-  .hero-logo {
-    width: 185px;               /* reduced */
-    transform: translateY(0);
-  }
-
-  .nav-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 16px;
-  }
-
-  .contact-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 520px) {
-
-  .hero {
-    padding: 70px 0;
-  }
-
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .logo-panel {
-    height: 125px;
-  }
-
-  .hero-logo {
-    width: 170px;
-  }
-}
-
-@media (max-width: 520px) {
-
-  .hero {
-    padding: 80px 0;
-  }
-
-  .logo-panel {
-    height: 160px;
-  }
-
-  .hero-logo {
-    width: 200px;
-  }
-}
-
-@media (max-width: 520px) {
   .hero {
     padding: 84px 0;
   }
@@ -352,15 +248,40 @@ footer {
     font-size: 1.05rem;
   }
 
-  .logo-panel {
-    height: 200px;
-    border-radius: 18px;
+  .hero-actions {
+    flex-wrap: wrap;
   }
 
-  .hero-logo {
-    width: 255px;
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .brand-strip {
+    padding: 30px 0;
+  }
+
+  .brand-strip-logo {
+    width: 420px;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
 
-
+  .brand-strip-logo {
+    width: 360px;
+  }
+}
