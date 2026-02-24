@@ -248,6 +248,8 @@ footer {
 
 @media (max-width: 900px) {
 
+  .hero { outline: 6px solid hotpink; }
+
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -359,5 +361,6 @@ footer {
     width: 255px;
   }
 }
+
 
 
