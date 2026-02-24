@@ -142,28 +142,32 @@ body {
   object-fit: contain;
   filter: contrast(1.15) saturate(1.10);
   transform: translateY(-4px);
+  display: block;
 }
 
-/* ---------- Brand Strip (Mobile only; hidden on desktop) ---------- */
+/* ---------- Mobile Logo Strip (hidden on desktop) ---------- */
 
 .brand-strip {
-  display: none; /* shown on mobile */
+  display: none; /* enabled on mobile in media query */
   background: #ffffff;
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .brand-strip-inner {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  /* IMPORTANT: no fixed height, so we don't reserve white space */
+  padding: 10px 0;
 }
 
-/* default (won’t really show on desktop anyway) */
 .brand-strip-logo {
-  width: 320px;
-  max-width: 88%;
+  /* Not tiny + responsive */
+  width: min(520px, 92vw);
   height: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* ---------- Sections ---------- */
@@ -267,7 +271,6 @@ footer {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
-  /* mobile/tablet hero becomes single column */
   .hero {
     padding: 84px 0 54px;
   }
@@ -294,25 +297,9 @@ footer {
     display: none;
   }
 
-  /* Show logo on white strip BELOW hero on mobile (tightly) */
+  /* Show mobile logo strip below hero */
   .brand-strip {
     display: block;
-    padding: 0;                 /* remove section padding */
-  }
-
-  .brand-strip-inner {
-    padding: 8px 0;             /* very small breathing room */
-    height: 150px;              /* constrain strip height */
-  }
-
-  .brand-strip-logo {
-    width: 320px;
-    max-width: 90%;
-    max-height: 135px;
-    height: auto;
-
-    /* CSS-crop the transparent padding in the PNG (mobile only) */
-    clip-path: inset(18% 0 24% 0);
   }
 
   .nav-content {
@@ -340,16 +327,12 @@ footer {
     font-size: 2.1rem;
   }
 
+  /* Slightly tighter on very small screens */
   .brand-strip-inner {
-    padding: 6px 0;
-    height: 130px;
+    padding: 8px 0;
   }
 
   .brand-strip-logo {
-    width: 285px;
-    max-height: 118px;
-
-    /* slightly tighter crop on very small screens */
-    clip-path: inset(20% 0 26% 0);
+    width: min(460px, 92vw);
   }
 }
