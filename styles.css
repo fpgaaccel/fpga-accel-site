@@ -114,12 +114,12 @@ body {
   text-decoration: underline;
 }
 
-/* ---------- Brand Strip (Logo on White) ---------- */
+/* ---------- Brand Strip (Refined) ---------- */
 
 .brand-strip {
   background: #ffffff;
-  padding: 42px 0;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 26px 0; /* reduced to remove giant white void */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .brand-strip-inner {
@@ -129,8 +129,8 @@ body {
 }
 
 .brand-strip-logo {
-  width: 520px;
-  max-width: 92%;
+  width: 420px;      /* slightly smaller overall */
+  max-width: 88%;
   height: auto;
   object-fit: contain;
 }
@@ -264,11 +264,11 @@ footer {
   }
 
   .brand-strip {
-    padding: 30px 0;
+    padding: 22px 0;
   }
 
   .brand-strip-logo {
-    width: 420px;
+    width: 360px;
   }
 
   .contact-card {
@@ -281,7 +281,11 @@ footer {
     font-size: 2.1rem;
   }
 
+  .brand-strip {
+    padding: 18px 0; /* tighter on mobile */
+  }
+
   .brand-strip-logo {
-    width: 360px;
+    width: 300px; /* correct mobile scale */
   }
 }
