@@ -241,3 +241,68 @@ footer {
 .footer-inner {
   opacity: 0.9;
 }
+
+/* ---------- Responsive (Mobile Fix) ---------- */
+
+@media (max-width: 900px) {
+  /* stack hero so the logo card isn’t pushed off-screen */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: left;
+  }
+
+  /* make the logo panel fit nicely on small screens */
+  .logo-panel {
+    width: 100%;
+    height: 220px;
+  }
+
+  .hero-logo {
+    width: 300px;
+    transform: translateY(-3px);
+  }
+
+  /* nav layout: keep it clean when it wraps */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 84px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .logo-panel {
+    height: 200px;
+    border-radius: 18px;
+  }
+
+  .hero-logo {
+    width: 255px;
+  }
+}
