@@ -144,12 +144,11 @@ body {
   transform: translateY(-4px);
 }
 
-/* ---------- Brand Strip (Mobile only by default hidden) ---------- */
+/* ---------- Brand Strip (Mobile only; hidden on desktop) ---------- */
 
 .brand-strip {
   display: none; /* shown on mobile */
   background: #ffffff;
-  padding: 14px 0; /* tight: no huge whitespace */
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
@@ -159,6 +158,7 @@ body {
   align-items: center;
 }
 
+/* default (won’t really show on desktop anyway) */
 .brand-strip-logo {
   width: 320px;
   max-width: 88%;
@@ -269,7 +269,7 @@ footer {
 @media (max-width: 900px) {
   /* mobile/tablet hero becomes single column */
   .hero {
-    padding: 84px 0 54px; /* slightly less bottom so transition feels tight */
+    padding: 84px 0 54px;
   }
 
   .hero-inner {
@@ -294,14 +294,25 @@ footer {
     display: none;
   }
 
-  /* Show the logo on white strip BELOW hero on mobile */
+  /* Show logo on white strip BELOW hero on mobile (tightly) */
   .brand-strip {
     display: block;
-    padding: 12px 0; /* tight: removes huge whitespace */
+    padding: 0;                 /* remove section padding */
+  }
+
+  .brand-strip-inner {
+    padding: 8px 0;             /* very small breathing room */
+    height: 150px;              /* constrain strip height */
   }
 
   .brand-strip-logo {
-    width: 300px;
+    width: 320px;
+    max-width: 90%;
+    max-height: 135px;
+    height: auto;
+
+    /* CSS-crop the transparent padding in the PNG (mobile only) */
+    clip-path: inset(18% 0 24% 0);
   }
 
   .nav-content {
@@ -329,11 +340,16 @@ footer {
     font-size: 2.1rem;
   }
 
-  .brand-strip {
-    padding: 10px 0; /* even tighter */
+  .brand-strip-inner {
+    padding: 6px 0;
+    height: 130px;
   }
 
   .brand-strip-logo {
-    width: 270px;
+    width: 285px;
+    max-height: 118px;
+
+    /* slightly tighter crop on very small screens */
+    clip-path: inset(20% 0 26% 0);
   }
 }
