@@ -1,44 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>FPGA Accel | Accelerate Your Time to Solution</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #111827;
+  background: #ffffff;
+}
 
-      <div class="hero-content">
-        <h1>Accelerate Your Time to Solution</h1>
-        <p>
-          FPGA architecture and high-performance acceleration for high-bandwidth,
-          low-latency, timing-critical systems on AMD FPGA platforms.
-        </p>
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #0f1f3d, #1e2f5c);
+  padding: 100px 20px;
+  color: white;
+}
 
-        <div class="hero-buttons">
-          <a href="#contact" class="btn-primary">Start a Conversation</a>
-          <a href="#expertise" class="btn-link">View expertise →</a>
-        </div>
-      </div>
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 60px;
+}
 
-      <div class="hero-logo">
-        <img src="images/fpga-accel-logo.png" alt="FPGA Accel Logo">
-      </div>
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
 
-    </div>
-  </section>
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  max-width: 600px;
+  color: #dbe2ff;
+}
 
-  <!-- SERVICES SECTION -->
-  <section class="services">
-    <div class="container">
-      <h2>Services</h2>
-      <p>Custom FPGA architecture, acceleration IP, and system-level optimization.</p>
-    </div>
-  </section>
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-</body>
-</html>
+.btn-primary {
+  background: #4f7cff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #3b63d6;
+}
+
+.btn-link {
+  color: #dbe2ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-logo img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .services {
+    padding: 60px 20px;
+  }
+}
