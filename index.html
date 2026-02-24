@@ -1,131 +1,151 @@
-/* GLOBAL RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FPGA Accel - FPGA architecture and high-performance acceleration on AMD FPGA platforms." />
+  <title>FPGA Accel | Accelerate Your Time to Solution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-  color: #111827;
-  background: #ffffff;
-}
+<body>
 
-/* HERO SECTION */
-.hero {
-  background: linear-gradient(135deg, #0f1f3d, #1e2f5c);
-  padding: 100px 20px;
-  color: white;
-}
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a class="brand" href="#">FPGA ACCEL</a>
 
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  align-items: center;
-  gap: 60px;
-}
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 24px;
-  font-weight: 700;
-}
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Accelerate Your Time to Solution</h1>
+        <p class="subtitle">
+          FPGA architecture and high-performance acceleration for high-bandwidth, low-latency, timing-critical systems on AMD FPGA platforms
+        </p>
 
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 32px;
-  max-width: 600px;
-  color: #dbe2ff;
-}
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Start a Conversation</a>
+          <a href="#expertise" class="link">View expertise →</a>
+        </div>
+      </div>
 
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
+      <!-- Desktop hero logo (shown on desktop, hidden on mobile) -->
+      <div class="hero-logo-wrap">
+        <div class="logo-panel">
+          <img class="hero-logo" src="assets/logo.png" alt="FPGA Accel logo" />
+        </div>
+      </div>
+    </div>
+  </header>
 
-.btn-primary {
-  background: #4f7cff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s ease;
-}
+  <!-- Mobile brand strip (hidden on desktop, shown on mobile) -->
+  <section class="brand-strip" aria-label="FPGA Accel logo">
+    <div class="container brand-strip-inner">
+      <img class="brand-strip-logo" src="assets/logo.png" alt="FPGA Accel logo" />
+    </div>
+  </section>
 
-.btn-primary:hover {
-  background: #3b63d6;
-}
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
 
-.btn-link {
-  color: #dbe2ff;
-  text-decoration: none;
-  font-weight: 500;
-}
+      <div class="grid">
+        <div class="card">
+          <h3>FPGA Architecture</h3>
+          <p>
+            System-level design and micro-architecture across AMD FPGA platforms including 7-Series, UltraScale, UltraScale+, and Versal.
+          </p>
+        </div>
 
-.hero-logo img {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-}
+        <div class="card">
+          <h3>Implementation &amp; Timing Closure</h3>
+          <p>
+            RTL development through validation: robust clocking strategies, clean constraints, and production-ready timing closure.
+          </p>
+        </div>
 
-/* SERVICES SECTION */
-.services {
-  padding: 80px 20px;
-  background: #ffffff;
-}
+        <div class="card">
+          <h3>High-Speed Integration</h3>
+          <p>
+            PCIe, 100GbE using CMAC, Aurora-based links, AMD high-speed transceivers, and high-performance memory subsystems integrated into cohesive acceleration platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  <section id="expertise" class="section alt">
+    <div class="container">
+      <h2>Technical Expertise</h2>
+      <p class="section-subtitle">
+        Deep capability in high-throughput data movement, deterministic pipelines, and real-time DSP and RF systems.
+      </p>
 
-.services h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+      <div class="grid">
+        <div class="card">
+          <h3>PCIe / QDMA Architectures</h3>
+          <p>
+            Host to FPGA streaming, high-throughput DMA data movers, buffering strategies, and integration patterns on AMD platforms.
+          </p>
+        </div>
 
-.services p {
-  font-size: 18px;
-  color: #4b5563;
-}
+        <div class="card">
+          <h3>DDR-Based Delay &amp; DRFM</h3>
+          <p>
+            Programmable delay lines, record and replay pipelines, and DRFM-class architectures leveraging external memory with deterministic timing control.
+          </p>
+        </div>
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
+        <div class="card">
+          <h3>100GbE &amp; High-Speed Serial</h3>
+          <p>
+            Line-rate Ethernet using AMD CMAC IP, AMD high-speed transceivers, Aurora links, and custom high-speed serial datapaths.
+          </p>
+        </div>
 
-  .hero {
-    padding: 60px 20px;
-  }
+        <div class="card">
+          <h3>Spectral Engines &amp; Deterministic DSP</h3>
+          <p>
+            Real-time FFT pipelines, frequency masks, trigger logic, timestamping, and low-latency streaming fabrics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="contact-lead">
+        If you are pushing bandwidth, latency, timing closure, or system integration risk — let’s talk.
+      </p>
 
-  .hero-content h1 {
-    font-size: 34px;
-  }
+      <div class="contact-card">
+        <div>
+          <div class="contact-label">Email</div>
+          <a class="contact-link" href="mailto:contact@fpga-accel.com">contact@fpga-accel.com</a>
+        </div>
 
-  .hero-content p {
-    margin-left: auto;
-    margin-right: auto;
-  }
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-text">United States • Remote engagements</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  .hero-buttons {
-    flex-direction: column;
-  }
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 FPGA Accel LLC. All rights reserved.</p>
+    </div>
+  </footer>
 
-  .hero-logo img {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  .services {
-    padding: 60px 20px;
-  }
-}
+</body>
+</html>
