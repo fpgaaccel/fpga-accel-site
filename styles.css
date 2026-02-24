@@ -1,291 +1,131 @@
-/* ---------- Base ---------- */
-
+/* GLOBAL RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
-  color: #0b1220;
+  color: #111827;
+  background: #ffffff;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #0f1f3d, #1e2f5c);
+  padding: 100px 20px;
+  color: white;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  max-width: 600px;
+  color: #dbe2ff;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-primary {
+  background: #4f7cff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #3b63d6;
+}
+
+.btn-link {
+  color: #dbe2ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 80px 20px;
   background: #ffffff;
 }
 
 .container {
-  width: 92%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* ---------- Navigation ---------- */
-
-.navbar {
-  background: #0f172a;
-  color: white;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-}
-
-.brand {
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a {
-  color: white;
-  margin-left: 24px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0.85;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* ---------- Hero ---------- */
-
-.hero {
-  background: linear-gradient(135deg, #0f172a, #132a57);
-  color: white;
-  padding: 110px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: 3.1rem;
-  line-height: 1.10;
-  margin-bottom: 18px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
+.services h2 {
+  font-size: 36px;
   margin-bottom: 20px;
-  max-width: 44rem;
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.services p {
+  font-size: 18px;
+  color: #4b5563;
 }
 
-.btn {
-  display: inline-block;
-  background: #3b82f6;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
 
-.btn:hover {
-  background: #2563eb;
-}
-
-.link {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* ---------- Brand Strip (Refined) ---------- */
-
-.brand-strip {
-  background: #ffffff;
-  padding: 26px 0; /* reduced to remove giant white void */
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.brand-strip-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand-strip-logo {
-  width: 420px;      /* slightly smaller overall */
-  max-width: 88%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* ---------- Sections ---------- */
-
-.section {
-  padding: 80px 0;
-}
-
-.section.alt {
-  background: #f8fafc;
-}
-
-h2 {
-  margin-bottom: 18px;
-  font-size: 2rem;
-}
-
-.section-subtitle {
-  margin-bottom: 28px;
-  color: #334155;
-  max-width: 56rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 26px;
-}
-
-.card {
-  padding: 24px;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-/* ---------- Contact ---------- */
-
-.contact-lead {
-  margin-top: 6px;
-  margin-bottom: 18px;
-  color: #334155;
-  max-width: 50rem;
-}
-
-.contact-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  max-width: 780px;
-}
-
-.contact-label {
-  font-size: 0.85rem;
-  color: #64748b;
-  font-weight: 750;
-  letter-spacing: 0.2px;
-  margin-bottom: 6px;
-}
-
-.contact-link {
-  font-weight: 900;
-  text-decoration: none;
-  color: #0b3ef0;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-.contact-text {
-  font-weight: 750;
-  color: #20304d;
-}
-
-/* ---------- Footer ---------- */
-
-footer {
-  background: #0f172a;
-  color: white;
-  padding: 30px 0;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-inner {
-  opacity: 0.9;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (max-width: 900px) {
   .hero {
-    padding: 84px 0;
+    padding: 60px 20px;
   }
 
-  .hero h1 {
-    font-size: 2.35rem;
-  }
-
-  .subtitle {
-    font-size: 1.05rem;
-  }
-
-  .hero-actions {
-    flex-wrap: wrap;
-  }
-
-  .nav-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
-  .brand-strip {
-    padding: 22px 0;
-  }
-
-  .brand-strip-logo {
-    width: 360px;
-  }
-
-  .contact-card {
+  .hero-inner {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 520px) {
-  .hero h1 {
-    font-size: 2.1rem;
+    text-align: center;
+    gap: 40px;
   }
 
-  .brand-strip {
-    padding: 18px 0; /* tighter on mobile */
+  .hero-content h1 {
+    font-size: 34px;
   }
 
-  .brand-strip-logo {
-    width: 300px; /* correct mobile scale */
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-logo img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .services {
+    padding: 60px 20px;
   }
 }
