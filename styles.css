@@ -148,26 +148,32 @@ body {
 /* ---------- Mobile Logo Strip (hidden on desktop) ---------- */
 
 .brand-strip {
-  display: none; /* enabled on mobile in media query */
+  display: none;
   background: #ffffff;
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .brand-strip-inner {
+  padding: 0; /* don't reserve space */
+}
+
+/* This is the "always works" crop container */
+.brand-strip-crop {
+  height: 120px;          /* controls the total strip height */
+  overflow: hidden;       /* crops any extra whitespace */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* IMPORTANT: no fixed height, so we don't reserve white space */
-  padding: 10px 0;
+  padding: 8px 0;         /* tiny breathing room */
 }
 
 .brand-strip-logo {
-  /* Not tiny + responsive */
-  width: min(520px, 92vw);
+  width: min(520px, 92vw); /* big enough on phones */
   height: auto;
-  object-fit: contain;
   display: block;
+
+  /* Nudge up to remove top transparent padding if any remains */
+  transform: translateY(-18px);
 }
 
 /* ---------- Sections ---------- */
@@ -292,12 +298,12 @@ footer {
     flex-wrap: wrap;
   }
 
-  /* Hide desktop hero logo panel on mobile */
+  /* Hide desktop logo panel */
   .hero-logo-wrap {
     display: none;
   }
 
-  /* Show mobile logo strip below hero */
+  /* Show mobile strip */
   .brand-strip {
     display: block;
   }
@@ -327,12 +333,14 @@ footer {
     font-size: 2.1rem;
   }
 
-  /* Slightly tighter on very small screens */
-  .brand-strip-inner {
-    padding: 8px 0;
+  /* tighter strip for small phones */
+  .brand-strip-crop {
+    height: 105px;
+    padding: 6px 0;
   }
 
   .brand-strip-logo {
     width: min(460px, 92vw);
+    transform: translateY(-20px);
   }
 }
