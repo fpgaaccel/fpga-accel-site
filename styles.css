@@ -334,3 +334,40 @@ footer {
   }
 }
 
+/* ===== Mobile logo strip hard override ===== */
+@media (max-width: 900px) {
+
+  /* Make sure desktop panel is gone */
+  .hero-logo-wrap { display: none !important; }
+
+  /* Strip on */
+  .brand-strip { 
+    display: block !important; 
+    background: #fff !important;
+    border-bottom: 1px solid rgba(15,23,42,0.06) !important;
+  }
+
+  /* Kill ANY leftover height rules causing the giant slab */
+  .brand-strip-inner,
+  .brand-strip-crop {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 16px 0 !important;
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Logo: responsive and NOT translated */
+  .brand-strip-logo {
+    width: min(520px, 90vw) !important;
+    height: auto !important;
+    display: block !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+}
+
+
