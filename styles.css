@@ -146,7 +146,6 @@ body {
 }
 
 /* ---------- Mobile Logo Strip (hidden on desktop) ---------- */
-
 .brand-strip {
   display: none;
   background: #ffffff;
@@ -154,26 +153,16 @@ body {
 }
 
 .brand-strip-inner {
-  padding: 0; /* don't reserve space */
-}
-
-/* This is the "always works" crop container */
-.brand-strip-crop {
-  height: 120px;          /* controls the total strip height */
-  overflow: hidden;       /* crops any extra whitespace */
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 8px 0;         /* tiny breathing room */
+  align-items: center;
+  padding: 24px 0;   /* This controls spacing. Adjust if needed. */
 }
 
 .brand-strip-logo {
-  width: min(520px, 92vw); /* big enough on phones */
+  width: min(520px, 90vw);
   height: auto;
   display: block;
-
-  /* Nudge up to remove top transparent padding if any remains */
-  transform: translateY(-18px);
 }
 
 /* ---------- Sections ---------- */
@@ -344,3 +333,4 @@ footer {
     transform: translateY(-20px);
   }
 }
+
