@@ -145,24 +145,18 @@ body {
   display: block;
 }
 
-/* ---------- Mobile Logo Strip (hidden on desktop) ---------- */
-.brand-strip {
-  display: none;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+/* ---------- Mobile logo (inside hero) ---------- */
+
+.hero-logo-mobile {
+  display: none;            /* desktop: hidden */
+  margin-top: 18px;         /* tight spacing from buttons */
 }
 
-.brand-strip-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 0;
-}
-
-.brand-strip-logo {
-  width: min(520px, 90vw);
+.hero-logo-mobile-img {
+  width: min(520px, 92vw);
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* ---------- Sections ---------- */
@@ -267,12 +261,12 @@ footer {
 
 @media (max-width: 900px) {
   .hero {
-    padding: 84px 0 18px;
+    padding: 84px 0 28px;   /* tighter bottom so Services is closer */
   }
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 18px;
   }
 
   .hero h1 {
@@ -285,21 +279,17 @@ footer {
 
   .hero-actions {
     flex-wrap: wrap;
+    gap: 12px;
   }
 
-  /* Hide desktop logo panel */
+  /* hide desktop logo panel completely on mobile */
   .hero-logo-wrap {
     display: none;
   }
 
-  /* Show mobile strip */
-  .brand-strip {
+  /* show the mobile logo inside the hero */
+  .hero-logo-mobile {
     display: block;
-  }
-
-  /* Tighten logo strip vertical whitespace */
-  .brand-strip-inner {
-    padding: 8px 0;
   }
 
   .nav-content {
@@ -320,19 +310,18 @@ footer {
 
 @media (max-width: 520px) {
   .hero {
-    padding: 70px 0 14px;
+    padding: 70px 0 22px;
   }
 
   .hero h1 {
     font-size: 2.1rem;
   }
 
-  /* tighter strip for small phones */
-  .brand-strip-inner {
-    padding: 6px 0;
+  .hero-logo-mobile {
+    margin-top: 14px;
   }
 
-  .brand-strip-logo {
+  .hero-logo-mobile-img {
     width: min(460px, 92vw);
   }
 }
