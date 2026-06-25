@@ -1,2 +1,2 @@
 # fpga-accel-site
-FPGA-ACCEL — Advanced FPGA architecture and high-performance acceleration solutions
+AMD/Xilinx FPGA architecture, custom IP core design, RTL implementation, timing closure, and system integration.
