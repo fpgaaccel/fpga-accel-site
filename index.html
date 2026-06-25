@@ -3,151 +3,403 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FPGA ACCEL provides expert FPGA architecture, RTL design, and system-level acceleration for low-latency, high-throughput, timing-critical systems on AMD FPGA platforms." />
-  <title>Advanced FPGA Architecture & RTL Design</title>
 
-  <!-- Cache-bust CSS -->
-  <link rel="stylesheet" href="styles.css?v=1003" />
+  <title>FPGA Accel | AMD FPGA Architecture, IP Core Design & RTL Development</title>
+  <meta
+    name="description"
+    content="FPGA Accel provides AMD/Xilinx FPGA architecture, custom IP core design, RTL implementation, PCIe/QDMA, 100GbE/CMAC, DSP, RFSoC, Versal, timing closure, and system integration services."
+  />
+
+  <meta property="og:title" content="FPGA Accel | AMD FPGA Architecture, IP Core Design & RTL Development" />
+  <meta property="og:description" content="FPGA architecture, custom IP core design, RTL implementation, PCIe/QDMA, 100GbE, DSP, timing closure, and AMD/Xilinx platform integration." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css?v=5000" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav class="navbar">
-    <div class="container nav-content">
-      <a class="brand" href="#">FPGA ACCEL</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="container nav-content">
+        <a class="brand" href="#" aria-label="FPGA Accel home">
+          <span class="brand-text">FPGA Accel</span>
+        </a>
 
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>From Architecture to Deployed FPGA Systems</h1>
-        <p class="subtitle">
-          Custom RTL and system integration, built for real-world systems.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Start a Conversation</a>
-          <a href="#expertise" class="link">View expertise →</a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#amd">AMD Expertise</a>
+          <a href="#expertise">Capabilities</a>
+          <a href="#work">Selected Work</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
+    </nav>
 
-      <!-- Desktop hero logo -->
-      <div class="hero-logo-wrap" aria-label="FPGA ACCEL logo">
-        <div class="logo-panel">
-          <img class="hero-logo" src="assets/logo.png?v=102" alt="FPGA ACCEL logo" />
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Principal-Level AMD/Xilinx FPGA Engineering</p>
+
+          <h1>FPGA Architecture, Custom IP Cores, and RTL Design for High-Performance Systems</h1>
+
+          <p class="hero-subtitle">
+            FPGA Accel provides AMD/Xilinx FPGA consulting for system architecture, custom IP core
+            design, RTL implementation, PCIe/QDMA, 100GbE/CMAC, DSP and RF datapaths, timing closure,
+            board bring-up, and embedded software integration.
+          </p>
+
+          <p class="principal-note">
+            Operated by a Principal FPGA engineer with hands-on AMD/Xilinx experience across
+            architecture, RTL implementation, high-speed interfaces, timing closure, and full
+            system delivery.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Discuss Your Project</a>
+            <a class="btn btn-secondary" href="#expertise">View Capabilities</a>
+          </div>
+
+          <div class="trust-row" aria-label="Core engineering domains">
+            <span>Custom FPGA IP</span>
+            <span>AMD Versal</span>
+            <span>UltraScale+</span>
+            <span>RFSoC</span>
+            <span>PCIe/QDMA</span>
+            <span>100GbE/CMAC</span>
+          </div>
         </div>
+
+        <aside class="hero-panel" aria-label="FPGA Accel expertise summary">
+          <div class="panel-topline">Expertise Snapshot</div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <strong>Architecture</strong>
+              <span>Device, IP, clocking, data movement, memory, and software-interface planning</span>
+            </div>
+            <div class="metric">
+              <strong>Custom IP</strong>
+              <span>Purpose-built RTL blocks, AXI interfaces, packet engines, DSP cores, and control logic</span>
+            </div>
+            <div class="metric">
+              <strong>Integration</strong>
+              <span>Vivado IP, transceivers, PCIe, Ethernet, DDR, NoC/CPM, Linux, and lab validation</span>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
+    </section>
   </header>
 
-  <!-- Mobile logo strip -->
-  <section class="brand-strip" aria-label="FPGA ACCEL logo (mobile)">
-    <div class="container brand-strip-inner">
-      <img class="brand-strip-logo" src="assets/logo.png?v=102" alt="FPGA ACCEL logo" />
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Services</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>FPGA Architecture</h3>
+  <main id="main">
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Services</p>
+          <h2>From targeted IP core design to complete FPGA system architecture</h2>
           <p>
-            System-level design and micro-architecture across AMD FPGA platforms including 7-Series, UltraScale, UltraScale+, and Versal.
+            FPGA Accel can support a narrow technical problem, own a custom RTL/IP block,
+            or help architect and implement the full FPGA subsystem around bandwidth, latency,
+            timing closure, and lab validation.
           </p>
         </div>
 
-        <div class="card">
-          <h3>Implementation &amp; Timing Closure</h3>
-          <p>
-            RTL development through validation: robust clocking strategies, clean constraints, and production-ready timing closure.
-          </p>
-        </div>
+        <div class="card-grid three">
+          <article class="card">
+            <h3>Custom IP Core Design</h3>
+            <p>
+              Design and implementation of reusable FPGA IP blocks: AXI-streaming datapaths,
+              register-controlled cores, packet engines, trigger modules, buffering blocks,
+              DSP pipelines, testbenches, and integration-ready RTL.
+            </p>
+          </article>
 
-        <div class="card">
-          <h3>High-Speed Integration</h3>
-          <p>
-            PCIe, 100GbE using CMAC, Aurora-based links, AMD high-speed transceivers, and high-performance memory subsystems integrated into cohesive acceleration platforms.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <article class="card">
+            <h3>Full FPGA System Architecture</h3>
+            <p>
+              End-to-end architecture for AMD FPGA systems, including device/IP selection,
+              clocking, resets, data movement, memory topology, host interface, software control,
+              observability, and implementation risk.
+            </p>
+          </article>
 
-  <section id="expertise" class="section alt">
-    <div class="container">
-      <h2>Technical Expertise</h2>
-      <p class="section-subtitle">
-        Deep capability in high-throughput data movement, deterministic pipelines, and real-time DSP and RF systems.
-      </p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>PCIe / QDMA Architectures</h3>
-          <p>
-            Host to FPGA streaming, high-throughput DMA data movers, buffering strategies, and integration patterns on AMD platforms.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>DDR-Based Delay &amp; DRFM</h3>
-          <p>
-            Programmable delay lines, record and replay pipelines, and DRFM-class architectures leveraging external memory with deterministic timing control.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>100GbE &amp; High-Speed Serial</h3>
-          <p>
-            Line-rate Ethernet using AMD CMAC IP, AMD high-speed transceivers, Aurora links, and custom high-speed serial datapaths.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Spectral Engines &amp; Deterministic DSP</h3>
-          <p>
-            Real-time FFT pipelines, frequency masks, trigger logic, timestamping, and low-latency streaming fabrics.
-          </p>
+          <article class="card">
+            <h3>RTL Implementation & Timing Closure</h3>
+            <p>
+              VHDL/SystemVerilog implementation, constraints, CDC cleanup, SLR-aware partitioning,
+              floorplanning, physical optimization, resource tradeoffs, and timing closure on
+              large AMD FPGA designs.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p class="contact-lead">
-        If you are pushing bandwidth, latency, timing closure, or system integration risk — let’s talk.
-      </p>
-
-      <div class="contact-card">
+    <section id="amd" class="section section-dark">
+      <div class="container amd-grid">
         <div>
-          <div class="contact-label">Email</div>
-          <a class="contact-link" href="mailto:contact@fpga-accel.com">contact@fpga-accel.com</a>
+          <p class="section-kicker">AMD FPGA Expertise</p>
+          <h2>Practical AMD/Xilinx platform expertise, not generic FPGA claims</h2>
+          <p class="large-text">
+            FPGA Accel focuses on real engineering execution inside the AMD FPGA ecosystem:
+            Vivado, block design, IP integrator, AMD transceiver subsystems, PCIe/QDMA,
+            CMAC/100GbE, RFSoC-style datapaths, Versal platform architecture, and timing
+            closure on complex devices.
+          </p>
         </div>
 
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-text">Northern Virginia (Dulles Technology Corridor) • Serving clients nationwide</div>
+        <div class="amd-panel">
+          <div class="amd-item">
+            <span>Devices</span>
+            <p>7 Series, UltraScale, UltraScale+, RFSoC, Versal, and Alveo-class AMD FPGA platforms</p>
+          </div>
+          <div class="amd-item">
+            <span>AMD IP</span>
+            <p>QDMA/XDMA-style DMA, CMAC, Aurora, AXI infrastructure, DDR controllers, GT transceivers, CPM/NoC integration patterns</p>
+          </div>
+          <div class="amd-item">
+            <span>Tool Flow</span>
+            <p>Vivado architecture, IP integrator, constraints, simulation, implementation, physical optimization, ILA/debug, and board bring-up</p>
+          </div>
+          <div class="amd-item">
+            <span>Systems</span>
+            <p>PCIe cards, embedded FPGA platforms, RF/digital I/Q systems, high-speed packet pipelines, and storage/data-mover architectures</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
+    <section id="expertise" class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Technical Capabilities</p>
+          <h2>Capability where FPGA programs usually become difficult</h2>
+          <p>
+            The differentiator is the ability to connect architecture, RTL, AMD IP, timing behavior,
+            software interfaces, and lab measurements into a working deliverable.
+          </p>
+        </div>
+
+        <div class="capability-matrix">
+          <article class="matrix-card featured-card">
+            <h3>High-Throughput Data Movement</h3>
+            <p>
+              PCIe/QDMA streaming, descriptor-aware flows, AXI-stream fabrics, packet framing,
+              DDR buffering, DMA-to-file utilities, backpressure behavior, and host/software validation.
+            </p>
+          </article>
+
+          <article class="matrix-card">
+            <h3>100GbE / CMAC / Transceivers</h3>
+            <p>
+              Line-rate Ethernet integration, AMD CMAC, Aurora, GTH/GTY/GTM-based datapaths,
+              clocking and reset sequencing, flow control, loopback, and link-level debug.
+            </p>
+          </article>
+
+          <article class="matrix-card">
+            <h3>DSP, RF, and DRFM-Class Design</h3>
+            <p>
+              Digital I/Q processing, DDS/NCO design, FFT pipelines, spectral engines,
+              trigger logic, timestamps, programmable delay, record/replay, and deterministic latency.
+            </p>
+          </article>
+
+          <article class="matrix-card">
+            <h3>Embedded Linux and Control Software</h3>
+            <p>
+              Yocto-based platform work, register access utilities, user-space DMA tools,
+              file streaming, diagnostics, and hardware/software integration support.
+            </p>
+          </article>
+
+          <article class="matrix-card">
+            <h3>Architecture Review and Rescue Work</h3>
+            <p>
+              Independent review of fragile FPGA designs, timing-risk reduction, CDC/reset review,
+              IP integration cleanup, performance bottleneck analysis, and debug strategy.
+            </p>
+          </article>
+
+          <article class="matrix-card">
+            <h3>Simulation, Test, and Bring-Up</h3>
+            <p>
+              Testbenches, deterministic stimulus, data checkers, debug counters, ILA planning,
+              hardware validation, and clean handoff documentation for engineering teams.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section representative-section">
+      <div class="container">
+        <div class="section-heading selected-heading">
+          <p class="section-kicker">Selected Challenges</p>
+          <h2>Representative engineering work on hard FPGA system problems</h2>
+          <p>
+            Many engagements involve proprietary or NDA-restricted systems; examples are intentionally
+            generalized while preserving the technical nature of the work.
+          </p>
+        </div>
+
+        <div class="selected-challenges">
+          <article class="challenge-card">
+            <div class="challenge-number">01</div>
+            <h3>High-Throughput PCIe/QDMA Streaming</h3>
+            <p>
+              Architected host-to-FPGA and FPGA-to-host data movement using custom AXI-stream datapaths,
+              buffering strategies, register control, and software-facing DMA utilities.
+            </p>
+          </article>
+
+          <article class="challenge-card">
+            <div class="challenge-number">02</div>
+            <h3>100GbE Packet Processing Integration</h3>
+            <p>
+              Integrated AMD CMAC-based Ethernet datapaths with custom packet processing, flow-control
+              behavior, loopback/debug hooks, and line-rate performance considerations.
+            </p>
+          </article>
+
+          <article class="challenge-card">
+            <div class="challenge-number">03</div>
+            <h3>RFSoC and DRFM-Class Digital I/Q Pipelines</h3>
+            <p>
+              Developed deterministic DSP/RF pipelines involving DDS/NCO generation, FFT processing,
+              trigger logic, timestamping, programmable delay, capture, and replay functions.
+            </p>
+          </article>
+
+          <article class="challenge-card">
+            <div class="challenge-number">04</div>
+            <h3>Large-Device Timing Closure</h3>
+            <p>
+              Supported UltraScale+ and Versal-class designs involving SLR-aware partitioning,
+              floorplanning, CDC cleanup, physical optimization, and timing-risk reduction.
+            </p>
+          </article>
+
+          <article class="challenge-card">
+            <div class="challenge-number">05</div>
+            <h3>FPGA Subsystem Bring-Up and Embedded Integration</h3>
+            <p>
+              Connected RTL, AMD IP, register interfaces, embedded Linux / Yocto utilities,
+              diagnostics, and lab measurements into coherent hardware/software validation flows.
+            </p>
+          </article>
+
+          <article class="challenge-card">
+            <div class="challenge-number">06</div>
+            <h3>Architecture Review and Rescue Work</h3>
+            <p>
+              Reviewed troubled FPGA programs for timing risk, dataflow bottlenecks, CDC/reset issues,
+              fragile IP integration, observability gaps, and practical debug strategy.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section engagement-section">
+      <div class="container engagement-grid">
+        <div>
+          <p class="section-kicker">Engagement Models</p>
+          <h2>Scoped for focused technical problems or full FPGA ownership</h2>
+        </div>
+
+        <div class="engagement-card">
+          <p>
+            Support can be structured as targeted custom IP core development, subsystem ownership,
+            architecture review, risk assessment, rescue/timing-closure support, or ongoing
+            integration and debug assistance.
+          </p>
+
+          <div class="engagement-tags" aria-label="Engagement model tags">
+            <span>IP Core Development</span>
+            <span>Subsystem Ownership</span>
+            <span>Architecture Review</span>
+            <span>Timing Rescue</span>
+            <span>Bring-Up Support</span>
+            <span>Integration Debug</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof-section">
+      <div class="container proof-grid">
+        <div class="proof-copy">
+          <p class="section-kicker">Why FPGA Accel</p>
+          <h2>Direct access to Principal-level FPGA execution</h2>
+          <p>
+            FPGA Accel is built for teams that need a technical owner for hard FPGA work:
+            someone who can reason about system architecture, implement clean RTL, navigate AMD IP
+            details, close timing, debug hardware in the lab, and communicate clearly across FPGA,
+            software, systems, and program stakeholders.
+          </p>
+        </div>
+
+        <div class="proof-points">
+          <div class="proof-point">
+            <strong>Architecture and implementation in one place</strong>
+            <span>System decisions are made by someone who also understands the RTL, timing, resource, and bring-up consequences.</span>
+          </div>
+          <div class="proof-point">
+            <strong>AMD platform fluency</strong>
+            <span>Practical experience with AMD FPGA device families, Vivado workflows, high-speed IP, transceivers, and implementation behavior.</span>
+          </div>
+          <div class="proof-point">
+            <strong>IP-core or full-system engagement model</strong>
+            <span>Support can be scoped as a focused IP core, a subsystem, an architecture review, or a full FPGA design effort.</span>
+          </div>
+          <div class="proof-point">
+            <strong>Hardware-to-software perspective</strong>
+            <span>Integration is treated as part of the design, from AXI registers and DMA utilities to lab validation and customer delivery.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Discuss an AMD FPGA design, IP core, or integration challenge</h2>
+          <p>
+            FPGA Accel can help with custom IP design, full FPGA system architecture,
+            PCIe/DMA, 100GbE, RF/DSP datapaths, timing closure, embedded Linux integration,
+            and hardware bring-up.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span>Email</span>
+            <a href="mailto:contact@fpga-accel.com">contact@fpga-accel.com</a>
+          </div>
+
+          <div class="contact-row">
+            <span>Location</span>
+            <p>Northern Virginia / Dulles Technology Corridor<br />Serving clients nationwide</p>
+          </div>
+
+          <div class="contact-row">
+            <span>Engagements</span>
+            <p>Custom IP cores, full system architecture, RTL development, integration support, bring-up, debug, and targeted consulting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 FPGA ACCEL LLC. All rights reserved.</p>
+      <p>© 2026 FPGA Accel LLC. All rights reserved.</p>
+      <p>AMD/Xilinx FPGA architecture, IP core design, RTL, timing closure, and integration.</p>
     </div>
   </footer>
-
 </body>
 </html>
